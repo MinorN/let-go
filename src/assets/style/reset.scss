@@ -15,5 +15,13 @@
 ul,
 ol,
 li {
+    list-style: none;
+}
+
+a {
     text-decoration: none;
+}
+
+img {
+    vertical-align: middle;
 }
