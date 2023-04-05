@@ -18,6 +18,9 @@ import GithubLogo from '@/assets/icon/github.png'
             </a>
         </div>
     </nav>
+    <main>
+        <router-view />
+    </main>
 </template>
 
 <style scoped lang="scss">
