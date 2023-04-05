@@ -51,11 +51,13 @@ import GithubLogo from '@/assets/icon/github.png'
         height: 100%;
 
         .nav-menu-guide {
+            font-size: 14px;
             margin-right: 10px;
             cursor: pointer;
         }
 
         .nav-menu-component {
+            font-size: 14px;
             margin-right: 10px;
             cursor: pointer;
         }
