@@ -1,5 +1,5 @@
 import { RouteRecordRaw } from "vue-router"
-import Text from '../components/text.vue'
+import Text from '@/components/text.vue'
 
 const routers: RouteRecordRaw[] = [
     {
