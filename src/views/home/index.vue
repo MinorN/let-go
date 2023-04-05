@@ -115,6 +115,7 @@ const imgsMap = [
                 .home-content-description-wrapper {
                     display: flex;
                     margin: 16px 0;
+                    justify-content: center;
 
                     >img {
                         height: 70px;
