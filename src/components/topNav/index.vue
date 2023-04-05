@@ -18,19 +18,22 @@ import GithubLogo from '@/assets/icon/github.png'
             </a>
         </div>
     </nav>
-    <main>
+    <main class="main">
         <router-view />
     </main>
 </template>
 
 <style scoped lang="scss">
 .nav {
+    position: sticky;
+    top: 0;
+    left: 0;
     width: 100vw;
     height: 55px;
     display: flex;
     justify-content: space-between;
     padding: 0 20px;
-
+    background-color: var(--nav-bg);
     border-bottom: 1px solid var(--nav-border-color);
 
     .nav-logo {
