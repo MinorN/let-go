@@ -12,7 +12,9 @@ import GithubLogo from '@/assets/icon/github.png'
         </div>
         <div class="nav-menu">
             <div class="nav-menu-guide">指南</div>
-            <div class="nav-menu-component">组件</div>
+            <div class="nav-menu-component">
+                <router-link to="/doc">组件</router-link>
+            </div>
             <a href="https://github.com/MinorN/let-go" target="_blank">
                 <img class="nav-menu-github" :src="GithubLogo" alt="GithubLogo">
             </a>
