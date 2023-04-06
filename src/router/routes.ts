@@ -1,6 +1,7 @@
 import { RouteRecordRaw } from "vue-router"
 import Home from '@/views/home/index.vue'
 import Doc from '@/views/doc/index.vue'
+import DocRouters from './doc'
 
 const routers: RouteRecordRaw[] = [
     {
@@ -9,7 +10,8 @@ const routers: RouteRecordRaw[] = [
     },
     {
         path: '/doc',
-        component: Doc
+        component: Doc,
+        children: [...DocRouters]
     },
 ]
 
