@@ -1,9 +1,6 @@
 # 介绍
+`let go` 是一个开源的前端UI框架，主要使用了 Vue 3 + TypeScript + Vite 进行搭建开发
 
-这是测试md是否成功
-
-
-# 测试
 ```ts
-const a:number = 1
+const s:string = '11'
 ```
