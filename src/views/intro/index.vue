@@ -1,12 +1,18 @@
-<script setup>
+<script>
 import md from '@/markdown/intro.md'
-
-const mdData = ref(md)
+export default {
+    name: 'Intro',
+    data () {
+        return {
+            md
+        }
+    }
+}
 </script>
 
 <template>
     <div>
-        <div v-html="mdData"></div>
+        <div v-html="md"></div>
     </div>
 </template>
 
