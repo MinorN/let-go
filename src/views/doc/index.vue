@@ -10,6 +10,7 @@ type DataType = {
 const dataList: DataType[] = [
     { name: '介绍', id: 0, path: '/doc/intro' },
     { name: 'Button按钮', id: 1, path: '/doc/button' },
+    { name: 'progress进度条', id: 2, path: '/doc/progress' },
 ]
 
 const selectedLi = ref<number | null>(null)
