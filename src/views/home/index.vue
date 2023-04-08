@@ -131,6 +131,7 @@ const imgsMap = [
 
                         .home-content-description-wrapper-description {
                             margin-top: 10px;
+                            min-width: 250px;
                         }
                     }
                 }
