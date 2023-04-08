@@ -17,6 +17,10 @@ const props = defineProps({
         type: Boolean,
         default: false
     },
+    loading: {
+        type: Boolean,
+        default: false
+    },
 })
 
 const classes = computed(() => {
@@ -30,7 +34,8 @@ const classes = computed(() => {
 </script>
 
 <template>
-    <button class="let-go-button" :class="classes">
+    <button class="let-go-button" :class="classes" :disabled="disabled || loading" @click="$emit('click', $event)">
+        <span v-if="loading" class="let-go-loading"></span>
         <slot />
     </button>
 </template>
@@ -55,6 +60,11 @@ $radius: 4px;
     border: 1px solid $border-color;
     border-radius: $radius;
     box-shadow: 0 1px 0 fade-out(black, 0.95);
+
+    &[disabled] {
+        cursor: not-allowed;
+        color: grey;
+    }
 
     &+& {
         margin-left: 10px;
@@ -162,6 +172,11 @@ $radius: 4px;
         box-shadow: none;
         color: inherit;
 
+        &[disabled] {
+            cursor: not-allowed;
+            color: grey;
+        }
+
         &:hover,
         &:focus {
             background: darken(white, 5%);
@@ -211,7 +226,27 @@ $radius: 4px;
         padding: 0 20px;
     }
 
+    .let-go-loading {
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        border-radius: 8px;
+        border-width: 2px;
+        border-style: solid;
+        border-color: $blue $blue $blue transparent;
+        animation: let-go-loading 1s linear infinite;
+    }
 
 
+}
+
+@keyframes let-go-loading {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 </style>

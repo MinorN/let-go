@@ -3,6 +3,7 @@ import Button1 from '../../demo/button1.demo.vue'
 import Button2 from '../../demo/button2.demo.vue'
 import Button3 from '../../demo/button3.demo.vue'
 import Button4 from '../../demo/button4.demo.vue'
+import Button5 from '../../demo/button5.demo.vue'
 import Code from '@/components/code/index.vue'
 </script>
 
@@ -28,6 +29,11 @@ import Code from '@/components/code/index.vue'
             <h2> <span>#</span> 支持disabled</h2>
             <p>使用 <span>disabled</span> 属性来改变 <span>Button</span> 组件的状态</p>
             <Code :component="Button4" />
+        </section>
+        <section>
+            <h2> <span>#</span> 支持loading</h2>
+            <p>使用 <span>loading</span> 属性来改变 <span>Button</span> 组件是否在加载</p>
+            <Code :component="Button5" />
         </section>
     </div>
 </template>
