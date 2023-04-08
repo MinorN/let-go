@@ -34,7 +34,7 @@ const classes = computed(() => {
 </script>
 
 <template>
-    <button class="let-go-button" :class="classes" :disabled="disabled || loading" @click="$emit('click', $event)">
+    <button class="let-go-button" :class="classes" :disabled="disabled || loading">
         <span v-if="loading" class="let-go-loading"></span>
         <slot />
     </button>

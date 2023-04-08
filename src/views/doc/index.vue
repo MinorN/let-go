@@ -77,6 +77,8 @@ const handleClick = (item: DataType) => {
         .doc-content-main {
             width: 100%;
             padding: 30px 40px;
+            height: calc(100vh - 95px);
+            overflow-y: auto;
         }
     }
 }
