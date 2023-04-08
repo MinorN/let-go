@@ -15,12 +15,8 @@ const routers: RouteRecordRaw[] = [
         component: md(intro)
     },
     {
-        path: 'code',
-        component: ButtonDemo
-    },
-    {
         path: 'button',
-        component: () => import('@/components/button/index.vue')
+        component: ButtonDemo
     }
 ]
 

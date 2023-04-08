@@ -1,15 +1,10 @@
-<demo>
-    常规用法
-</demo>
-
 <script setup lang="ts">
-
 </script>
 
 <template>
-    <div>
-        我是button
-    </div>
+    <button>
+        <slot />
+    </button>
 </template>
 
 <style scoped lang="scss"></style>

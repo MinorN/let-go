@@ -1,10 +1,11 @@
 <script setup lang="ts">
-
+import Button from '@/lib/button/index.vue'
 </script>
 
 <template>
     <div>
-        <h1>组件展示源代码示例</h1>
+        <h1>示例1</h1>
+        <Button>你好</Button>
     </div>
 </template>
 
