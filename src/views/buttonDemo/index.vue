@@ -1,14 +1,10 @@
-<demo>
-    常规用法
-</demo>
-
 <script setup lang="ts">
 
 </script>
 
 <template>
     <div>
-        我是button
+        <h1>组件展示源代码示例</h1>
     </div>
 </template>
 

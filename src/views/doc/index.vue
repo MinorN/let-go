@@ -1,27 +1,32 @@
 <script setup lang="ts">
 import { ref } from 'vue';
+import { useRouter } from 'vue-router';
 
 type DataType = {
-    name: string, id: number
+    name: string,
+    id: number,
+    path: string
 }
 const dataList: DataType[] = [
-    { name: '介绍', id: 0 },
-    { name: 'Button按钮', id: 1 },
-    { name: 'Button按钮', id: 2 },
-    { name: 'Button按钮', id: 3 },
-    { name: 'Button按钮', id: 4 },
-    { name: 'Button按钮', id: 5 },
-    { name: 'Button按钮', id: 6 },
-    { name: 'Button按钮', id: 7 },
-    { name: 'Button按钮', id: 8 },
-    { name: 'Button按钮', id: 9 },
-    { name: 'Button按钮', id: 10 },
-    { name: 'Button按钮', id: 11 },
+    { name: '介绍', id: 0, path: '/doc/intro' },
+    { name: 'Button按钮', id: 1, path: '/doc/code' },
+    { name: 'Button按钮', id: 2, path: '/doc/intro' },
+    { name: 'Button按钮', id: 3, path: '/doc/intro' },
+    { name: 'Button按钮', id: 4, path: '/doc/intro' },
+    { name: 'Button按钮', id: 5, path: '/doc/intro' },
+    { name: 'Button按钮', id: 6, path: '/doc/intro' },
+    { name: 'Button按钮', id: 7, path: '/doc/intro' },
+    { name: 'Button按钮', id: 8, path: '/doc/intro' },
+    { name: 'Button按钮', id: 9, path: '/doc/intro' },
+    { name: 'Button按钮', id: 10, path: '/doc/intro' },
+    { name: 'Button按钮', id: 11, path: '/doc/intro' },
 ]
 
 const selectedLi = ref<number | null>(null)
+const router = useRouter()
 const handleClick = (item: DataType) => {
     selectedLi.value = item.id
+    router.push(item.path)
 }
 </script>
 
