@@ -66,6 +66,7 @@ const classes = computed(() => {
     }
 
     .let-go-progress-progress-label {
+        min-width: 40px;
         font-size: 14px;
         white-space: nowrap;
     }
@@ -83,6 +84,8 @@ const classes = computed(() => {
         height: 100%;
         background-color: #1890ff;
         border-radius: 5px;
+        animation-duration: 3s;
+        transition: .6s ease;
 
         &.let-go-progress-progress-current-primary {
             background-color: #1890ff;
