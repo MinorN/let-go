@@ -11,9 +11,11 @@ import GithubLogo from '@/assets/icon/github.png'
             </router-link>
         </div>
         <div class="nav-menu">
-            <div class="nav-menu-guide">指南</div>
+            <div class="nav-menu-guide">
+                <router-link to="/doc/intro">指南</router-link>
+            </div>
             <div class="nav-menu-component">
-                <router-link to="/doc">组件</router-link>
+                <router-link to="/doc/button">组件</router-link>
             </div>
             <a href="https://github.com/MinorN/let-go" target="_blank">
                 <img class="nav-menu-github" :src="GithubLogo" alt="GithubLogo">
@@ -56,12 +58,22 @@ import GithubLogo from '@/assets/icon/github.png'
             font-size: 14px;
             margin-right: 10px;
             cursor: pointer;
+
+            a {
+                color: inherit;
+                font-size: inherit;
+            }
         }
 
         .nav-menu-component {
             font-size: 14px;
             margin-right: 10px;
             cursor: pointer;
+
+            a {
+                color: inherit;
+                font-size: inherit;
+            }
         }
 
         .nav-menu-github {
