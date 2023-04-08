@@ -9,18 +9,22 @@ const props = defineProps({
         type: String as PropType<'small' | 'default' | 'large'>,
         default: 'default'
     },
+    level: {
+        type: String as PropType<'plain' | 'primary' | 'success' | 'danger'>,
+        default: 'plain'
+    },
     disabled: {
         type: Boolean,
         default: false
     },
-
 })
 
 const classes = computed(() => {
-    const { theme, size } = props
+    const { theme, size, level } = props
     return {
         [`let-go-button-${theme}`]: theme,
         [`let-go-button-${size}`]: size,
+        [`let-go-button-${level}`]: level,
     }
 })
 </script>
@@ -65,5 +69,145 @@ $radius: 4px;
     &::-moz-focus-inner {
         border: 0;
     }
+
+    // theme
+    &.let-go-button-button {
+
+        // level
+        &.let-go-button-primary {
+            color: white;
+            background-color: #79bbff;
+            border-color: #79bbff;
+
+            &:hover,
+            &:focus {
+                background-color: darken(#79bbff, 10%);
+                border-color: darken(#79bbff, 10%);
+            }
+        }
+
+        &.let-go-button-success {
+            color: white;
+            background-color: #67c23a;
+            border-color: #67c23a;
+
+            &:hover,
+            &:focus {
+                background-color: darken(#67c23a, 10%);
+                border-color: darken(#67c23a, 10%);
+
+            }
+        }
+
+        &.let-go-button-danger {
+            color: white;
+            background-color: #f56c6c;
+            border-color: #f56c6c;
+
+            &:hover,
+            &:focus {
+                background-color: darken(#f56c6c, 10%);
+                border-color: darken(#f56c6c, 10%);
+            }
+        }
+    }
+
+    &.let-go-button-link {
+        border-color: transparent;
+        box-shadow: none;
+        color: $blue;
+
+        &:hover,
+        &:focus {
+            color: lighten($blue, 10%)
+        }
+
+        // level
+        &.let-go-button-primary {
+            color: #79bbff;
+
+            &:hover,
+            &:focus {
+                color: darken(#79bbff, 10%);
+
+            }
+        }
+
+        &.let-go-button-success {
+            color: #67c23a;
+
+            &:hover,
+            &:focus {
+                color: darken(#67c23a, 10%);
+
+            }
+        }
+
+        &.let-go-button-danger {
+            color: #f56c6c;
+
+            &:hover,
+            &:focus {
+                color: darken(#f56c6c, 10%);
+            }
+        }
+    }
+
+    &.let-go-button-text {
+        border-color: transparent;
+        box-shadow: none;
+        color: inherit;
+
+        &:hover,
+        &:focus {
+            background: darken(white, 5%);
+        }
+
+        // level
+        &.let-go-button-primary {
+            color: #79bbff;
+
+            &:hover,
+            &:focus {
+                color: darken(#79bbff, 10%);
+
+            }
+        }
+
+        &.let-go-button-success {
+            color: #67c23a;
+
+            &:hover,
+            &:focus {
+                color: darken(#67c23a, 10%);
+
+            }
+        }
+
+        &.let-go-button-danger {
+            color: #f56c6c;
+
+            &:hover,
+            &:focus {
+                color: darken(#f56c6c, 10%);
+            }
+        }
+    }
+
+    // size
+    &.let-go-button-small {
+        height: 24px;
+        font-size: 12px;
+        padding: 0 4px;
+    }
+
+    &.let-go-button-large {
+        height: 40px;
+        font-size: 18px;
+        padding: 0 20px;
+    }
+
+
+
 }
 </style>
