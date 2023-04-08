@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-import { useRouter } from 'vue-router';
+import { ref, watch } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
 
 type DataType = {
     name: string,
@@ -12,11 +12,16 @@ const dataList: DataType[] = [
     { name: 'Button按钮', id: 1, path: '/doc/button' },
     { name: 'progress进度条', id: 2, path: '/doc/progress' },
 ]
-
-const selectedLi = ref<number | null>(null)
 const router = useRouter()
+const route = useRoute()
+const selectedLi = ref<string | null>(route.path)
+
+watch(() => route.path, (newPath) => {
+    console.log('run')
+    selectedLi.value = newPath
+})
+
 const handleClick = (item: DataType) => {
-    selectedLi.value = item.id
     router.push(item.path)
 }
 </script>
@@ -26,7 +31,7 @@ const handleClick = (item: DataType) => {
         <div class="doc-content">
             <aside class="doc-content-aside">
                 <ul>
-                    <li v-for="item in dataList" :class="{ active: selectedLi === item.id }" :key="item.id"
+                    <li v-for="item in dataList" :class="{ active: selectedLi === item.path }" :key="item.id"
                         @click="handleClick(item)">{{ item.name }}</li>
                 </ul>
             </aside>
