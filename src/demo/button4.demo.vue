@@ -1,11 +1,10 @@
 <demo>
-    常规使用
+    支持disabled
 </demo>
 <template>
     <div>
-        <Button>你好</Button>
-        <Button theme="link">你好</Button>
-        <Button theme="text">你好</Button>
+        <Button>未禁用</Button>
+        <Button disabled>已禁用</Button>
     </div>
 </template>
     

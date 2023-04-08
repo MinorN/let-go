@@ -7,13 +7,13 @@ export function customBlock() {
         name: 'customBlock',
         transform(code, id) {
             if (
-                !/\/src\/views\/.*\.demo\.vue/.test(id) ||
+                !/\/src\/demo\/.*\.demo\.vue/.test(id) ||
                 !/vue&type=demo/.test(id)
             ) {
                 return;
             }
 
-            let path = `.${id.match(/\/src\/views\/.*\.demo\.vue/)[0]}`;
+            let path = `.${id.match(/\/src\/demo\/.*\.demo\.vue/)[0]}`;
             const file = fs.readFileSync(path).toString();
             const parsed = baseParse(file).children.find(n => n.tag === 'demo')
             const title = parsed.children[0].content
