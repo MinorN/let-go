@@ -1,4 +1,5 @@
 import { createApp } from 'vue'
+import '@/lib/index.scss'
 import '@/assets/style/reset.scss'
 import '@/assets/style/vars.scss'
 import App from './App.vue'
